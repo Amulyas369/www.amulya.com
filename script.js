@@ -108,7 +108,10 @@ lessProjects.addEventListener("click",()=>{
     document.querySelector(".more-projects").style.display="none";
 })
 
-//  for Send Massage
+/**
+ *for message
+ */
+
 
 function sendMassage(){
   Email.send({
