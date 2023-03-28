@@ -107,3 +107,22 @@ lessProjects.addEventListener("click",()=>{
     moreProjects.style.display="block";
     document.querySelector(".more-projects").style.display="none";
 })
+
+//  for Send Massage
+
+function sendMassage(){
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "amulyacdc102@gmail.com",
+    Password : "6B39573E1E37DE3F1D644C22441EBA5352FE",
+    To : 'amulyacdc102@gmail.com',
+    From :document.querySelector("#email").value,
+    Subject : "New Contact form Enquary",
+    Body : "Name: " + document.querySelector("#name").value +
+     "<br/> Email: " + document.querySelector("#email").value + 
+     "<br/> Contact: " + document.querySelector("#phone").value + 
+     "<br/> Message: " + document.querySelector("#message").value
+}).then(
+  message => alert("Message Sent Succesfully")
+);
+}
